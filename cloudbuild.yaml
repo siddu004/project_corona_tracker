@@ -1,0 +1,16 @@
+steps:
+- name: 'node:14'
+  entrypoint: 'bash'
+  args:
+  - '-c'
+  - |
+    npm install
+    npm run build
+- name: 'gcr.io/cloud-builders/docker'
+  args:
+  - 'build'
+  - '-t'
+  - 'gcr.io/hackathon-test-430006/$REPO_NAME:$COMMIT_SHA'
+  - '.'
+images:
+- 'gcr.io/hackathon-test-430006/$REPO_NAME:$COMMIT_SHA'
