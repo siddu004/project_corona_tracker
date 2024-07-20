@@ -10,7 +10,7 @@ steps:
   args:
   - 'build'
   - '-t'
-  - 'gcr.io/hackathon-test-430006/$REPO_NAME:$COMMIT_SHA'
+  - 'gcr.io/$PROJECT_ID/$REPO_NAME:$COMMIT_SHA'
   - '.'
 images:
-- 'gcr.io/hackathon-test-430006/$REPO_NAME:$COMMIT_SHA'
+- 'gcr.io/$PROJECT_ID/$REPO_NAME:$COMMIT_SHA'
